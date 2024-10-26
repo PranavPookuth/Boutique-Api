@@ -7,6 +7,8 @@ class Category(models.Model):
 class Customer(models.Model):
     customer_name=models.CharField(max_length=100)
     email=models.EmailField()
+    def __str__(self):
+        return self.customer_name
 
 
 class Product(models.Model):
@@ -17,6 +19,9 @@ class Product(models.Model):
     stock = models.PositiveIntegerField()
     image=models.ImageField(upload_to='Image')
 
+    def __str__(self):
+        return self.product_name
+
 
 class Order(models.Model):
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
@@ -24,4 +29,6 @@ class Order(models.Model):
     quantity = models.IntegerField()
     order_date = models.DateTimeField(auto_now_add=True)
 
+    def __str__(self):
+        return self.customer
 
