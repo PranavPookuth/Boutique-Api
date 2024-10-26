@@ -4,6 +4,10 @@ from django.db import models
 class Category(models.Model):
     name=models.CharField(max_length=200)
 
+class Customer(models.Model):
+    name=models.CharField(max_length=100)
+    email=models.EmailField()
+
 class Product(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
