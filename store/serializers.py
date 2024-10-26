@@ -30,4 +30,4 @@ class OrderSerializer(serializers.ModelSerializer):
     p_name=serializers.CharField(source='product.product_name',read_only=True)
     class Meta:
         model = Order
-        fields = ['id','customer','product','quantity','order_date','name','p_name']
+        fields = ['id','customer ','product','quantity','order_date','name','p_name']
