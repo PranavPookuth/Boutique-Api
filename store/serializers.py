@@ -13,6 +13,13 @@ class ProductSerializer(serializers.ModelSerializer):
         model = Product
         fields = '__all__'
 
+    def create(self, validated_data):
+        category_data = validated_data.pop('category')
+
+        category, created = Category.objects.get_or_create(**category_data)
+        product = Product.objects.create(category=category, **validated_data)
+        return product
+
 class CustomerSerializer(serializers.ModelSerializer):
     class Meta:
         model =Customer

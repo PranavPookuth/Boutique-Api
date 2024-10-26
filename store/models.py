@@ -15,7 +15,7 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
     category = models.ForeignKey(Category, related_name='products', on_delete=models.CASCADE)
     stock = models.PositiveIntegerField()
-    image=models.ImageField(upload_to='Image',default="hjk")
+    image=models.ImageField(upload_to='Image')
 
 
 class Order(models.Model):
