@@ -77,16 +77,14 @@ WSGI_APPLICATION = 'boutique.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django_rest_framework'/ 'mysql',
-        'USER':'root',
-        'PASSWORD':'pranavpj',
+        'NAME': 'mydb',
+        'USER': 'root',
+        'PASSWORD': 'pranavpj',
         'HOST':'localhost',
-        'PORT':'3306'
-
+        'PORT':'3306',
     }
 }
 
