@@ -84,7 +84,8 @@ DATABASES = {
         'NAME': 'django_rest_framework'/ 'mysql',
         'USER':'root',
         'PASSWORD':'pranavpj',
-        'HOST'
+        'HOST':'localhost',
+
     }
 }
 
