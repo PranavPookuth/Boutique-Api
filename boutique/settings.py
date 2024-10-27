@@ -80,8 +80,8 @@ WSGI_APPLICATION = 'boutique.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'mysql',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'django_rest_framework'/ 'mysql',
     }
 }
 
