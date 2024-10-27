@@ -82,6 +82,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'django_rest_framework'/ 'mysql',
+        'USER':'root',
+        'PASSWORD':'pranavpj',
+        'HOST'
     }
 }
 
