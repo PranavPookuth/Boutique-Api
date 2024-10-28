@@ -77,16 +77,24 @@ WSGI_APPLICATION = 'boutique.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
+import pymysql
+pymysql.install_as_MySQLdb()
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mydb',
+        'NAME': 'boutiquedb',
         'USER': 'root',
-        'PASSWORD': 'pranavpj',
-        'HOST':'localhost',
+        'PASSWORD':'pranavpj',
+        'HOST':'127.0.0.1',
         'PORT':'3306',
+        'OPTIONS': {
+            'charset': 'utf8mb4',
+            'use_unicode': True,
+        },
     }
 }
+
 
 
 # Password validation
